@@ -5,7 +5,7 @@ ch=0
 ans=[]
 bef=None
 now=0
-for i in range(1,length,2) : # 다른 방식 찾기
+for i in range(1,length,3) : # 다른 방식 찾기
     now=int(num_list[i])
     if bef!=now :
         ch=0
@@ -13,6 +13,5 @@ for i in range(1,length,2) : # 다른 방식 찾기
         ans.append(now)
         ch=1
     bef=now
-solution(ans)
-
+print(ans)
 
