@@ -1,4 +1,4 @@
-def star(n):
+def star(n): # 노가다하면서 찾은 규칙으로, 한방에 표현할 수 있을 것 같음. 변수들 간의 관계 정리해보기
     for i in range(1,n+1):
         for j in range(1,n+1):
             if i%3==2 and j%3==2:
