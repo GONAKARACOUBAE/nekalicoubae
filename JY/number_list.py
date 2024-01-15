@@ -7,6 +7,8 @@ i=0
 j=0
 k=0
 ch = [[0 for j in range(cols)] for i in range(rows)]
+for i in phone_book : # 포문 쓰는법 잘 알기
+    print(i)
 for i in range(1, len(phone)) :
     if phone[i]=='"' :
         ch[cnt][bi]=i
@@ -18,10 +20,7 @@ for i in range(1, len(phone)) :
 i=0
 j=0
 k=0
-print('hi)')
 x=0            
-print(cnt)
-print(ch)
 for i in range(0, cnt-1):
     for j in range(i+1, cnt) :
         for k in range(1, ch[i][1]-ch[i][0]) :
