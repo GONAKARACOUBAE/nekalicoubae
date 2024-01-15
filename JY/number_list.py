@@ -18,6 +18,7 @@ for i in range(1, len(phone)) :
 i=0
 j=0
 k=0
+print('hi)')
 x=0            
 print(cnt)
 print(ch)
