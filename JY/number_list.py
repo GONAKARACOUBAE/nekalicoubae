@@ -1,5 +1,5 @@
-phone=input()
 '''
+phone=input()
 rows = 1000001
 cols = 2
 cnt = 0
@@ -36,8 +36,8 @@ if x==1 :
     print('false')
 else :
     print('true')
-'''
-# 정확도 67, 시간 0점 효율적인 방법 연구
+
+# 개선 후 정확도 67, 시간 0점 효율적인 방법 연구
 answer=True
     rows = 1000001
     cols = 21
@@ -71,3 +71,4 @@ answer=True
     else :
         answer=True
     return answer
+'''
