@@ -1,2 +1,3 @@
-a=input()
-print(ord('A'))
+n=input()
+a=list(input())
+print(a[2])
