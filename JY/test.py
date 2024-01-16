@@ -1,3 +1,2 @@
 n=input()
-a=list(input())
-print(a[2])
+print(n[2])
