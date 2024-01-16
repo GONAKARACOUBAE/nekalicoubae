@@ -1,12 +1,12 @@
 n=int(input())
 score=None
 score_list=[]
-score_list=map(float, input().split())
+score_list=list(map(float, input().split()))
 max_score=max(score_list) # float?
 hap=0.0
 for i in range(n) :
     score_list[i]=(score_list[i]/max_score)*100
-for i in range(n) :
-    hap=hap+score_list[i] # TypeError: unsupported operand type(s) for +: 'NoneType' and 'float'
+    hap=hap+score_list[i]
+     # TypeError: unsupported operand type(s) for +: 'NoneType' and 'float'
 ave=hap/n
 print(ave)
