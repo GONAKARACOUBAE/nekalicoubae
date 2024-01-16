@@ -1,2 +1,3 @@
-n=input()
-print(n[2])
+n=[]
+n=input().split()
+print(len(n))
