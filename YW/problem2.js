@@ -1,11 +1,5 @@
-// 오늘의 문제 풀이 1번
-const solution = (arr) => {
-  let answer = [];
-  arr.map((number, index) => {
-    if (answer[answer.length - 1] !== number) {
-      answer.push(number);
-    }
-  });
-
-  return answer;
+//문제풀이 2번
+const solution = (phone_book) => {
+  phone_book.sort();
+  return !phone_book.some((v, i) => phone_book[i + 1]?.indexOf(v) === 0);
 };
