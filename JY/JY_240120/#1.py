@@ -17,5 +17,5 @@ for i in range(n) :
             break
     if switch ==1 :
         print('NO')
-    else :
+    elif switch ==0 and ch[0]+ch[1]==0 :
         print('YES')
