@@ -5,19 +5,22 @@ def ch_prime() :
         if ch[i]==0 :
             for j in range(i+i, 10**6, i) :
                 ch[j]=1
-def ch_num(now, order, cnt) :
-    global answer, ch
-    if ch[now]==0 :
-        answer+=1
-    if cnt==len(numbers) :
-        return 0
-    ch_num(now*10+int(numbers[order]), order+1, cnt+1)
-    ch_num(int(numbers[order]), 0, 1)
-    
+def ch_num(num, idx_order, ea, value, now_num_list) :
+    if now_num_list[num] > 0 :
+        ch_num(index[idx_order], idx_order, value, now_num_list)
+    else :
+        ch_num(index[idx_order+1], idx_order+1, num_list[index[idx_order+1]])
+
 answer=0
 ch=[0]*(10**6)
+index=[]
+num_list=[0]*10
 ch_prime()
 numbers=input()
+for i in numbers :
+    if num_list[int(i)] == 0 :
+        index.append(i)
+    num_list[int(i)]+=1
 ch[1]=ch[0]=1
-ch_num(0, 0, 0)
+ch_num(index[0], 0, num_list[index[0]], 0, num_list)
 print(answer)
