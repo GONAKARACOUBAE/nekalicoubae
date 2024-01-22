@@ -27,6 +27,7 @@ def cal(ea, arr, operator, value, order) :
             else :
                 temp = value * -1
                 temp = int(temp / arr[order])
+                temp *= -1
                 cal(ea, arr, operator,  temp, order+1)
                 operator[3]+=1
 
