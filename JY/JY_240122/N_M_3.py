@@ -1,12 +1,7 @@
 def seq(limit, ea, cnt, arr, now_value) :
-    if now_value>limit :
-        cnt=0
-        arr=[]
-        seq(limit, ea, cnt, arr, now_value+1)
-    if cnt<ea :
+    if cnt<ea and now_value <=limit :
         arr.append(now_value)
         seq(limit, ea, cnt+1, arr, now_value)
-    else :
         print(arr)
         arr.pop()
         seq(limit, ea, cnt-1, arr, now_value+1)
