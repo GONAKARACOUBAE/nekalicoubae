@@ -3,8 +3,9 @@ def seq(limit, ea, now_value, now_ea, arr) :
         for i in range(ea) :
             print(a[i], end=" ")
         print()
+        return 0
     for i in range(1, limit+1) :
-        if i>now_value :
+        if i>=now_value :
             arr.append(i)
             seq(limit, ea, i, now_ea+1, arr)
             arr.pop()
