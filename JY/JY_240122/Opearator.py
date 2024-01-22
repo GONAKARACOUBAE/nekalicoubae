@@ -12,13 +12,13 @@ def cal(ea, arr, operator, max, min, value, order) :
         if operator[0] > 0 :
             operator[0]-=1
             cal(ea, arr, operator, max, min, value+arr[order], order+1)
-        elif operator[1] > 0 :
+        if operator[1] > 0 :
             operator[1]-=1
             cal(ea, arr, operator, max, min, value-arr[order], order+1)
-        elif operator[2] > 0 :
+        if operator[2] > 0 :
             operator[2]-=1
             cal(ea, arr, operator, max, min, value*arr[order], order+1)
-        elif operator[3] > 0 :
+        if operator[3] > 0 :
             operator[3]-=1
             if value>0 :
                 cal(ea, arr, operator, max, min, int(value/arr[order]), order+1)
