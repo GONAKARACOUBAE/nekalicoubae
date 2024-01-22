@@ -40,3 +40,4 @@ ans[1]=2147483647
 cal(n, a, ope, a[0], 1)
 print(ans[0])
 print(ans[1])
+print('solved')
