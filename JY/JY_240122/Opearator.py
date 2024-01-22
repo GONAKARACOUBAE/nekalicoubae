@@ -27,7 +27,7 @@ def cal(ea, arr, operator, value, order) :
             else :
                 temp = value * -1
                 temp = int(temp / arr[order])
-                temp *= -1
+                temp = temp * -1
                 cal(ea, arr, operator,  temp, order+1)
                 operator[3]+=1
 
@@ -35,7 +35,7 @@ n=int(input())
 a=list(map(int, input().split()))
 ope=list(map(int, input().split()))
 ans=[0]*3
-ans[0]=0
+ans[0]=-2147483640
 ans[1]=2147483647
 cal(n, a, ope, a[0], 1)
 print(ans[0])
