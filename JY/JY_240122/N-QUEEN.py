@@ -24,8 +24,7 @@ def queen(arr, x, y, num, cnt) :
     for i in range(1, num+1) :
         for j in range(1, num+1) :
             if arr[i][j]==0 :
-                arr=ch_queen(arr, i, j, num)
-                queen(arr, i, j, num, cnt+1)  
+                queen(ch_queen(arr, i, j, num), i, j, num, cnt+1)  
 ans=0
 n=int(input())
 i=0
