@@ -1,5 +1,6 @@
 def ch_queen(a, now_x, now_y, bound) :
-    for i in range(bound) :
+    a[now_x][now_y]+=1
+    for i in range(1,bound) :
         if now_y+i <=bound :
             a[now_x][now_y+i]+=1
         if now_x+i <=bound :
@@ -18,7 +19,8 @@ def ch_queen(a, now_x, now_y, bound) :
             a[now_x-i][now_y+i]+=1
     return a
 def dch_queen(a, now_x, now_y, bound) :
-    for i in range(bound) :
+    a[now_x][now_y]-=1
+    for i in range(1,bound) :
         if now_y+i <=bound :
             a[now_x][now_y+i]-=1
         if now_x+i <=bound :
