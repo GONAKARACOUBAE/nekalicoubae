@@ -44,16 +44,16 @@ def queen(arr, i, j, num, cnt) :
         ans+=1
         return 0
     while True : 
-        if j+1<=num :
+        if j<=num :
             j+=1
-        elif j+1> num :
+        if j>num :
             i+=1
             j=1
         if i>num :
             break
         if arr[i][j]==0 :
             arr = ch_queen(arr, i, j, num)
-            queen(arr, i, j, num, cnt+1)
+            queen(arr, i+1, j+1, num, cnt+1)
             arr = dch_queen(arr, i, j, num)
 ans=0
 n=int(input())
