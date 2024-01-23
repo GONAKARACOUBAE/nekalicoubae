@@ -53,7 +53,7 @@ def queen(arr, i, j, num, cnt) :
             break
         if arr[i][j]==0 :
             arr = ch_queen(arr, i, j, num)
-            queen(arr, i+1, j+1, num, cnt+1)
+            queen(arr, i+1, 0, num, cnt+1)
             arr = dch_queen(arr, i, j, num)
 ans=0
 n=int(input())
