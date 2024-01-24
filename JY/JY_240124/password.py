@@ -17,7 +17,7 @@ def ch_pass(l, c, al_list, arr, ea, j, vowels, constants) :
                 constants+=1
             ch_pass(l, c, al_list, arr, ea+1, i+1, vowels, constants)
             arr.pop()
-            if ch_vowels(al_list[i]) == 0 :
+            if ch_vowels(al_list[i]) == 1 :
                 vowels-=1
             else :
                 constants-=1
