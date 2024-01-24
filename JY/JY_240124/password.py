@@ -4,7 +4,7 @@ def ch_vowels(alpha) :
     return 0
 def ch_pass(l, c, al_list, arr, ea, j, vowels, constants) :
     if ea == l :
-        if vowels == 1 and constants >=2 :
+        if vowels >= 1 and constants >=2 :
             for i in range (l) :
                 print(arr[i], end="")
             print()
@@ -12,12 +12,14 @@ def ch_pass(l, c, al_list, arr, ea, j, vowels, constants) :
         for i in range(j, c) :
             arr.append(al_list[i])
             if ch_vowels(al_list[i]) == 1 :
-                vowels = 1
+                vowels += 1
             else :
                 constants+=1
             ch_pass(l, c, al_list, arr, ea+1, i+1, vowels, constants)
             arr.pop()
             if ch_vowels(al_list[i]) == 0 :
+                vowels-=1
+            else :
                 constants-=1
 l, c = map(int, input().split())
 al_list = input().split()
