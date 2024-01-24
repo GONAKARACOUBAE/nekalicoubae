@@ -18,7 +18,9 @@ seq=list(map(int, input().split()))
 seq.sort()
 cnt=0
 ch=[0]*10001
-ans=[[0] for j in range(2000) for i in range(9)]
+ans=[[0 for j in range(2)] for i in range(2000)]
 for i in seq :
     ch[i]+=1
 sequence(n, m, seq, [], 0, 0, ch)
+for i in range(cnt) :
+    print(ans[i])
