@@ -6,9 +6,10 @@ for i in range(n) :
     a, b = map(int, sys.stdin.readline().split())
     arr[b].append(a)
 ans = 0
-sorted_arr = sorted(arr.items(), key = lambda item: item[1])
+
 
 for i in arr.keys() :
+    arr[i].sort()
     for j in range(len(arr[i])) :
         if j == 0 :
             ans+=arr[i][1]-arr[i][0]
