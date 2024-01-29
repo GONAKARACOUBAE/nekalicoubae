@@ -8,6 +8,5 @@ for i in range(n) :
     if (num in ans) == False :
         ans[num]=1
     else :
-        val=ans.get(num)
-        ans[num]=val+1
+        ans[num]+=+1
 print(ans)
