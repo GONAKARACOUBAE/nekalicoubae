@@ -9,4 +9,5 @@ for i in a :
             ans.append(j)
             b[j]=None
             break
-print(ans)
+for i in ans :
+    print(i, end=" ")
