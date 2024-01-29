@@ -8,4 +8,5 @@ for i in a :
         if i == b[j] :
             ans.append(j)
             b[j]=None
+            break
 print(ans)
