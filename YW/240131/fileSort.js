@@ -23,6 +23,8 @@ const sortExtensionDic = sortedKey.reduce((newObj, key) => {
   return newObj;
 }, {});
 
+let result = "";
 Object.keys(sortExtensionDic).map((extension, index) => {
-  console.log(extension, sortExtensionDic[extension]);
+  result += `${extension} ${sortExtensionDic[extension]}\n`;
 });
+console.log(result.trim());
