@@ -11,3 +11,4 @@ ans.sort()
 print(len(ans))
 for i in range(len(ans)): 
     print(ans[i])
+#solved
