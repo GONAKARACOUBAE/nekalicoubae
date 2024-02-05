@@ -21,3 +21,4 @@ for i in range(t) :
     dap.append(ans)
 for i in dap :
     print(i)
+so hard
