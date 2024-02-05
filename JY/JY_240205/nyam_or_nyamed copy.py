@@ -17,3 +17,4 @@ for i in range(t) :
     dap.append(ans)
 for i in dap :
     print(i)
+#굳이 짬뽕? 이진탐색으로 위치를 특정해낼 수 있다면 그걸로 끝이다
