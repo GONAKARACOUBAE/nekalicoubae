@@ -1,11 +1,10 @@
 import sys
 def cut(x, t) :
     result=0
-    for i in wood :
-        if i > x :
-            result+=i-x
-            if result>t :
-                break
+    for i in wood[::-1] :
+        if i <= x :
+            break
+        result+=i-x
 
     return result
 def parametric_search(low, high, target) :
