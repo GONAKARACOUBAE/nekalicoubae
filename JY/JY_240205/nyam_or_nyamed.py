@@ -1,15 +1,15 @@
 import sys
-def bin(start, end, target) :
-    mid = int((start + end)/2)
-    if start>end :
-        return 0
-    if arr_a[mid]==target :
-        return mid
-    elif arr_a[mid]>target :
-        return bin(start, mid-1, target)
+def bin(start, end, target, last=-1) :
+    if start <= end:
+        mid = (start + end)//2
+        if arr_a[mid]==target :
+            return mid
+        elif arr_a[mid]>target :
+            return bin(start, mid-1, target, last)
+        else :
+            return bin(mid+1, end, target, last)
     else :
-        return bin(mid+1, end, target)
-
+        return start
 t=int(sys.stdin.readline())
 dap=[]
 for i in range(t) :
