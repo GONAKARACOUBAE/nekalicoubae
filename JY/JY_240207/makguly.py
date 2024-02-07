@@ -15,7 +15,7 @@ def search(low, high) :
         return -1
     mid=(low+high)//2
     if makguly(mid) == True :
-        if ans < mid :
+        if ans <= mid :
             ans=mid
         return search(mid+1, high)
     else :
