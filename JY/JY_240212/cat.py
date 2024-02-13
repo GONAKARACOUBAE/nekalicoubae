@@ -22,6 +22,8 @@ while True :
                     break
                 low+=1
     if high == len(arr)-1 :
+        if ans < high-low+1 :
+            ans = high-low+1
         break
     if low == len(arr)-1 :
         break
