@@ -9,15 +9,13 @@ high=len(arr)-1
 ans=sys.maxsize
 while True :
     temp=arr[high]-arr[low]
-    if low > high or temp < m :
+    if low >= high or temp < m :
         break
     if temp >= m and temp < ans :
         ans=temp
-        high-=1
+    if arr[high]-arr[low+1] < arr[high-1]-arr[low] :
         low+=1
-    if arr[low+1]-arr[low] < arr[high]-arr[high-1] :
-        high-=1
     else :
-        low+=1
+        high-=1
 print(ans)
     
