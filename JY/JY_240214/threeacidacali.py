@@ -30,7 +30,6 @@ for i in range(n-2) :
                 high-=1
             else :
                 low+=1
-res.sort()
 for i in range(3) :
     print(res[i], end=' ')
             
