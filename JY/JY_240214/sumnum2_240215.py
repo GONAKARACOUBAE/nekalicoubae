@@ -5,6 +5,8 @@ low=high=0
 hap=a[low]
 ans=0
 while True :
+    if low == n :
+        break
     if low>high :
         high=low
         hap=a[low]
