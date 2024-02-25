@@ -9,40 +9,45 @@ const [keyLength, wordNumber] = input
   .map((number) => Number(number));
 let answer = "";
 
-const wordList = input.shift().split(" ").sort();
+const wordSortedList = input.shift().split(" ").sort();
 
-const countVowel = (wordList) => {
-  let moCount = 0;
-  let jaCount = 0;
-  wordList.map((word) => {
-    if (word === "a" || word === "e" || word === "i" || word === "o" || word === "u") {
-      moCount += 1;
-    } else {
-      jaCount += 1;
+const countVowel = (wordLists) => {
+  const moList = ["a", "e", "i", "o", "u"];
+  const result = [];
+  wordLists.map((wordList) => {
+    let moCount = 0;
+    let jaCount = 0;
+    wordList.map((word) => {
+      if (moList.includes(word)) {
+        moCount += 1;
+      } else {
+        jaCount += 1;
+      }
+    });
+    if (jaCount >= 2 && moCount >= 1) {
+      result.push(wordList.join("") + "\n");
     }
   });
-  if (jaCount >= 2 && moCount >= 1) {
-    return true;
-  } else {
-    return false;
-  }
+  return result;
 };
 
-const makeSecretKey = (location, secretWordList) => {
-  if (location === keyLength) {
-    if (countVowel(secretWordList)) {
-      answer += secretWordList.join("");
-      answer += "\n";
-    }
+const getCombination = (arr, selectNumber) => {
+  if (selectNumber === 1) {
+    return arr.map((element) => [element]);
   }
-  console.log("location : ", location, "secretWordList : ", secretWordList);
-  if (keyLength === wordNumber - location && secretWordList.length === keyLength) {
-    return;
-  }
-  secretWordList.push(wordList[location]);
-  makeSecretKey(location + 1, secretWordList);
-  secretWordList.pop();
-  makeSecretKey(location + 1, secretWordList);
+  const results = [];
+  arr.forEach((fixed, index, origin) => {
+    const rest = origin.slice(index + 1);
+    const combinations = getCombination(rest, selectNumber - 1);
+    const attached = combinations.map((combination) => [fixed, ...combination]);
+    results.push(...attached);
+  });
+  return results;
 };
-makeSecretKey(0, []);
-console.log(answer);
+
+const combinationList = getCombination(wordSortedList, keyLength);
+const answerList = countVowel(combinationList);
+answerList.map((answerKey) => {
+  answer += answerKey;
+});
+console.log(answer.trim());
