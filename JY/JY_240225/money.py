@@ -2,7 +2,7 @@ import sys
 n=int(sys.stdin.readline())
 arr=list(map(int, sys.stdin.readline().split()))
 m=int(sys.stdin.readline())
-low=min(arr)
+low=0
 high=max(arr)
 ans=0
 while True :
