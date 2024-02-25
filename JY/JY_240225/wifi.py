@@ -15,10 +15,10 @@ while low<=high :
         if arr[i]-cur >= mid :
             cur=arr[i]
             cnt+=1
-    if cnt==c and ans < mid:
-        ans=mid
-    if cnt<c :
-        high=mid-1
-    else :
+    if cnt>=c :
+        if ans < mid :
+            ans=mid
         low=mid+1
+    else :
+        high=mid-1
 print(ans)
