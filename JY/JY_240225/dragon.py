@@ -17,9 +17,9 @@ while low<=high :
             money-=i
         else :
             money-=i
-    if cnt <= m  :
+    if cnt > m or mid < max(arr) :
+        low=mid+1 
+    else :
         high=mid-1
         ans=mid
-    else :
-        low=mid+1
 print(ans)
