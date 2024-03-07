@@ -6,7 +6,7 @@ def dfs(now) :
     print(now, end=" ")
     for i in range(1, n+1) :
         if graph[now][i]==True and chd[i]==0 :
-            return dfs(i)
+            dfs(i)
 def bfs(now) :
     q = deque([now])
     chb[now]=1
