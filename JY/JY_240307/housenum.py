@@ -29,5 +29,6 @@ for i in range(n) :
                             cnt+=1
             num.append(cnt)
 print(ans)
+num.sort()
 for i in num :
     print(i)
