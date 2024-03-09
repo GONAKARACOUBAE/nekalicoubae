@@ -11,19 +11,19 @@ for i in range(t) :
     q=deque()
     cnt=0
     for j in range(k) :
-        x, y = map(int, sys.stdin.readline().split())
-        graph[y][x]=1
-    for l in range(m) :
-        for j in range(n) :
-            if ch[j][l]==0 and graph[j][l]==1 :
-                q.append([j, l])
-                ch[j][l]=1
+        y, x = map(int, sys.stdin.readline().split())
+        graph[x][y]=1
+    for l in range(n) :
+        for j in range(m) :
+            if ch[l][j]==0 and graph[l][j]==1 :
+                q.append([l, j])
+                ch[l][j]=1
                 cnt+=1
                 while q :
                     xx, yy = q.popleft()
                     for d in range(4) :
-                        nowx=yy+dy[d]
-                        nowy=xx+dx[d]
+                        nowx=xx+dy[d]
+                        nowy=yy+dx[d]
                         if 0<= nowx < n and 0<= nowy <m :
                             if ch[nowx][nowy]==0 and graph[nowx][nowy]==1 :
                                 ch[nowx][nowy]=1
