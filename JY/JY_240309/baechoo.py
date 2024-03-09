@@ -31,3 +31,4 @@ for i in range(t) :
     ans.append(cnt)
 for i in ans :
     print(i)
+'solved'
